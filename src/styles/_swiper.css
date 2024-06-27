@@ -53,7 +53,7 @@
 @media (width < 740px) {
 
     .swiper {
-
+        overflow: visible;
     }
         .swiper-wrapper {
             /*align-items: stretch;*/

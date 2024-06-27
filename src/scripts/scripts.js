@@ -1,5 +1,4 @@
 new Swiper('.swiper--blog', {
-    loop: true,
     slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 20,

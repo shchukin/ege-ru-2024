@@ -1,20 +1,28 @@
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
+new Swiper('.swiper--blog', {
     loop: true,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
 
-    // If we need pagination
     pagination: {
         el: '.swiper-pagination',
+        clickable: true,
     },
 
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 
-    // And if we need scrollbar
     scrollbar: {
         el: '.swiper-scrollbar',
     },
+
+    breakpoints: {
+        // when window width is <= 740px
+        740: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        }
+    }
 });

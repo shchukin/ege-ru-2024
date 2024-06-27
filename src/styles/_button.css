@@ -51,7 +51,7 @@
     }
 
 .button--secondary:hover {
-    background-color: #F3F9FF;
+    background-color: var(--white-hover);
 }
     .button__icon {
         vertical-align: top;

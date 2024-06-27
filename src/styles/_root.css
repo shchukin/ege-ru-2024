@@ -14,6 +14,9 @@
     --orange: #FC5E38;
     --orange-90pct: #FD7658;
     --black: #0F1015;
+    --yellow: #FFD046;
+    --white-hover: #F3F9FF;
+    --light-orange: #FFDDD1;
 }
 
 @media (350px <= width < 600px) {

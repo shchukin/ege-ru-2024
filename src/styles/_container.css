@@ -10,3 +10,11 @@
     width: auto;
     max-width: 1440px;
 }
+
+
+@media (width < 740px) {
+
+    .container {
+        width: auto;
+    }
+}

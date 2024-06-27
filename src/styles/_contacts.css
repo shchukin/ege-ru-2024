@@ -1,32 +1,57 @@
 .contacts {
-
+    margin-top: 120px;
 }
     .contacts__heading {
-
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
     }
 
     .contacts__body {
-
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: 630px 446px;
+        gap: 70px;
+        align-items: center;
     }
         .contacts__preview {
-
+            height: 378px;
+            background-color: #FFFFFF;
+            padding: 4px;
         }
 
         .contacts__data {
 
         }
             .contacts__channel {
+                margin-top: 72px;
+            }
 
+            .contacts__channel:first-child {
+                margin-top: 0;
             }
                 .contacts__sub-heading {
                     margin-top: 0;
                     margin-bottom: 0;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 24px;
                 }
 
-                .contacts__value {
-
+                .contacts__address {
+                    margin-top: 22px;
+                    font-size: 20px;
+                    line-height: 27px;
                 }
 
-                .contacts__addition {
+                .contacts__metro {
+                    margin-top: 19px;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
 
+                .contacts__hours {
+                    margin-top: 2px;
+                    font-size: 20px;
+                    line-height: 27px;
                 }

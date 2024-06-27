@@ -1,7 +1,7 @@
 new Swiper('.swiper--blog', {
     slidesPerView: 1,
     slidesPerGroup: 1,
-    spaceBetween: 20,
+    spaceBetween: parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')),
 
     pagination: {
         el: '.swiper-pagination',

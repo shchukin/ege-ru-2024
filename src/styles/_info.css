@@ -1,0 +1,39 @@
+.info {
+    margin-top: 120px;
+}
+    .info__inner {
+        max-width: 914px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+        .info__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .info__body {
+            margin-top: 30px;
+        }
+
+
+
+@media (width < 740px) {
+
+    .info {
+        margin-top: 80px;
+    }
+        .info__inner {
+            /*max-width: 914px;*/
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+        }
+            .info__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                text-align: center;
+            }
+
+            .info__body {
+                margin-top: 40px;
+            }
+}

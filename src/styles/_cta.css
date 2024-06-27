@@ -1,0 +1,39 @@
+.cta {
+    margin-top: 79px;
+}
+    .cta__frame {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 130px;
+        background-image: url("../vectors/cta.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+
+
+@media (width < 740px) {
+
+    .cta {
+        margin-top: 80px;
+    }
+        .cta__frame {
+            height: auto;
+            background-image: none;
+        }
+            .cta__frame .button {
+
+            }
+
+            @media (width < 350px) {
+
+                .cta__frame .button {
+                    font-size: 16px;
+                }
+            }
+                .cta__frame .button__icon {
+                    display: none;
+                }
+}

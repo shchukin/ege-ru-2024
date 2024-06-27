@@ -1,8 +1,10 @@
 body {
     height: 100%;
+    background-color: var(--beige);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: var(--font);
     font-size: var(--body-font-size);
     line-height: var(--body-line-height);
+    color: var(--black);
 }

@@ -1,5 +1,5 @@
 @import url("../vendors/normalize/normalize.css");
-@import url("../vendors/magnific-popup/magnific-popup.css");
+@import url("_fonts.css");
 @import url("_box-sizing.css");
 @import url("_visuallyhidden.css");
 @import url("_root.css");
@@ -14,5 +14,7 @@
 @import url("_link.css");
 @import url("_button.css");
 @import url("_wysiwyg.css");
+
+@import url("_footer.css");
 
 

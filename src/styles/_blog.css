@@ -1,3 +1,30 @@
 .blog {
+    margin-top: 120px;
+}
+    .blog__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
 
+    .blog__body {
+        margin-top: 70px;
+    }
+
+
+
+@media (width < 740px) {
+
+    .blog {
+        margin-top: 80px;
+    }
+        .blog__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+            /*text-align: center;*/
+        }
+
+        .blog__body {
+            margin-top: 40px;
+        }
 }

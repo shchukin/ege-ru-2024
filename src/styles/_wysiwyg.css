@@ -69,4 +69,34 @@
 }
 
 
+.wysiwyg ol {
+    padding-left: 24px;
+}
+
+.wysiwyg ul {
+    list-style: none;
+    padding-left: 0;
+}
+    .wysiwyg li {
+        position: relative;
+        margin-top: 10px;
+        padding-left: 24px;
+    }
+
+    .wysiwyg li:first-child {
+        margin-top: 0;
+    }
+        .wysiwyg li::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            display: block;
+            width: 4px;
+            height: 4px;
+            background-color: currentColor;
+            border-radius: 50%;
+        }
+
+
 

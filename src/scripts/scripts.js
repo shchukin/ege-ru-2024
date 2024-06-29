@@ -1,27 +1,47 @@
-new Swiper('.swiper--blog', {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')),
+document.addEventListener('DOMContentLoaded', () => {
 
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+    /* Faq accordion */
 
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+    const faqQuestions = document.querySelectorAll('.faq__question');
 
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            faqItem.classList.toggle('faq__item--expanded');
+        });
+    });
 
-    breakpoints: {
-        // when window width is <= 740px
-        740: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
+
+
+    /* Blog Swiper */
+
+    new Swiper('.swiper--blog', {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')),
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+
+        breakpoints: {
+            740: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            }
         }
-    }
+    });
+
+
+
 });

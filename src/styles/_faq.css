@@ -33,7 +33,7 @@
                     width: calc(100% + 40px);
                     margin-left: -20px;
                     margin-right: -20px;
-                    padding: 15px 80px 15px 20px;
+                    padding: 15px 116px 15px 20px;
                     background-color: transparent;
                     border-radius: 8px;
                     border: none;
@@ -62,9 +62,40 @@
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-position: center center;
+                        transition: transform 300ms ease;
                     }
 
                 .faq__dropdown {
-                    margin-top: 25px;
+                    margin-top: 10px;
+                    margin-bottom: 30px;
                     display: none;
+                }
+
+
+            .faq__item--expanded {
+
+            }
+                .faq__item--expanded .faq__question {
+
+                }
+                    .faq__item--expanded .faq__question::after {
+                        transform: scaleY(-1);
+                    }
+
+
+                @keyframes faq-item-slide {
+
+                    from {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+                    to {
+                        opacity: 100%;
+                        transform: translateY(0);
+                    }
+                }
+
+                .faq__item--expanded .faq__dropdown {
+                    display: block;
+                    animation: faq-item-slide 300ms ease;
                 }

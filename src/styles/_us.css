@@ -1,5 +1,5 @@
 .us {
-
+    margin-top: 119px;
 }
     .us__heading {
         margin-top: 0;
@@ -37,7 +37,7 @@
 @media (width < 740px) {
 
     .us {
-
+        margin-top: 90px;
     }
         .us__heading {
             /*margin-top: 0;*/

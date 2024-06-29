@@ -1,4 +1,8 @@
 .faq {
+    --right-padding: 116px;
+}
+
+.faq {
 
 }
     .faq__heading {
@@ -33,7 +37,7 @@
                     width: calc(100% + 40px);
                     margin-left: -20px;
                     margin-right: -20px;
-                    padding: 15px 116px 15px 20px;
+                    padding: 15px var(--right-padding) 15px 20px;
                     background-color: transparent;
                     border-radius: 8px;
                     border: none;
@@ -67,7 +71,8 @@
 
                 .faq__dropdown {
                     margin-top: 10px;
-                    margin-bottom: 30px;
+                    margin-bottom: 15px;
+                    padding-right: var(--right-padding);
                     display: none;
                 }
 

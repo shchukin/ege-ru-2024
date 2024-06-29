@@ -1,0 +1,69 @@
+.faq {
+
+}
+    .faq__heading {
+        margin-top: 0;
+        margin-bottom: 70px;
+        text-align: center;
+    }
+
+    .faq__section {
+        margin-top: 46px;
+    }
+
+    .faq__section:first-child {
+        margin-top: 0;
+    }
+        .faq__sub-heading {
+            margin-top: 0;
+            margin-bottom: 26px;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 42px;
+        }
+
+        .faq__accordion {
+
+        }
+            .faq__item {
+
+            }
+                .faq__question {
+                    position: relative;
+                    width: calc(100% + 40px);
+                    margin-left: -20px;
+                    margin-right: -20px;
+                    padding: 15px 80px 15px 20px;
+                    background-color: transparent;
+                    border-radius: 8px;
+                    border: none;
+                    font-family: inherit;
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 31px;
+                    color: var(--black);
+                    text-align: left;
+                    cursor: pointer;
+                }
+
+                .faq__question:hover {
+                    background-color: #FFFFFF;
+                }
+                    .faq__question::after {
+                        content: "";
+                        position: absolute;
+                        right: 20px;
+                        top: 50%;
+                        margin-top: -12px;
+                        width: 24px;
+                        height: 24px;
+                        background-image: url("../vectors/chevron-down.svg");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                    }
+
+                .faq__dropdown {
+                    margin-top: 25px;
+                    display: none;
+                }

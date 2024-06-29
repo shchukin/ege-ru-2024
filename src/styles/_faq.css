@@ -44,6 +44,7 @@
                     color: var(--black);
                     text-align: left;
                     cursor: pointer;
+                    transition: background-color var(--transition-hover);
                 }
 
                 .faq__question:hover {

@@ -1,6 +1,10 @@
 .card {
+    padding: 37px 40px 35px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
     display: flex;
     align-items: flex-start;
+    gap: 36px;
 }
     .card__preview {
         display: block;
@@ -10,3 +14,43 @@
         .card__photo {
             vertical-align: top;
         }
+
+
+    .card__body {
+        margin-top: 10px;
+    }
+        .card__name {
+
+        }
+
+        .card__university {
+            margin-top: 23px;
+        }
+
+        .card__data {
+            margin-top: 22px;
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+            .card__stat {
+
+            }
+                .card__stat-heading {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    font-weight: inherit;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                .card__stat-value {
+                    margin-top: 3px;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+
+                .card__stat-value--highlight {
+                    color: var(--orange);
+                }

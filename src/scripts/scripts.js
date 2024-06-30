@@ -56,11 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         },
 
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
         breakpoints: {
             740: {
                 loop: true,

@@ -7,10 +7,17 @@
     gap: 36px;
 }
     .card__preview {
+        flex-shrink: 0;
         display: block;
         border-radius: 50%;
         overflow: hidden;
+        transition: filter var(--transition-hover);
     }
+
+    .card__preview:hover {
+        filter: brightness(105%) contrast(105%);
+    }
+
         .card__photo {
             vertical-align: top;
         }

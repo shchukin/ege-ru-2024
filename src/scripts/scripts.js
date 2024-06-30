@@ -44,4 +44,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+    /* Results Swiper */
+
+    new Swiper('.swiper--results', {
+
+        spaceBetween: parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')),
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        breakpoints: {
+            740: {
+                loop: true,
+                slidesPerView: "auto",
+                centeredSlides: true,
+                spaceBetween: 20,
+                pagination: false
+            }
+        }
+    });
+
+
+
 });

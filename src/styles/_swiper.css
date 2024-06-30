@@ -49,55 +49,40 @@
             }
 
 
+@media (width < 740px) {
+
+    .swiper-pagination-bullet {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+.swiper--blog {
+
+}
 
 @media (width < 740px) {
 
-    .swiper {
+    .swiper--blog {
         overflow: visible;
     }
-        .swiper-wrapper {
-            /*align-items: stretch;*/
-        }
-            .swiper-slide {
-                /*height: auto;*/
-            }
 
-        .swiper-pagination-bullets {
-            /*padding-top: 15px;*/
-            /*position: static;*/
-            /*display: flex;*/
-            /*align-items: stretch;*/
-        }
-            .swiper-pagination-bullet {
-                /*flex-shrink: 0;*/
-                /*margin: 0 !important;*/
-                /*background-color: transparent;*/
-                /*border-radius: 0;*/
-                padding: 10px;
-                /*width: auto;*/
-                /*height: auto;*/
-                /*opacity: 100%;*/
-                /*transition: background-color var(--transition-hover);*/
-            }
-                .swiper-pagination-bullet::after {
-                    /*content: "";*/
-                    /*flex-shrink: 0;*/
-                    /*display: block;*/
-                    /*width: 11px;*/
-                    /*height: 11px;*/
-                    /*background-color: var(--light-orange);*/
-                    /*border-radius: 50%;*/
-                }
-
-                .swiper-pagination-bullet:hover::after {
-                    /*background-color: var(--orange-90pct);*/
-                }
-
-            .swiper-pagination-bullet-active {
-                /*cursor: default !important;*/
-            }
-                .swiper-pagination-bullet-active::after,
-                .swiper-pagination-bullet-active:hover::after {
-                    /*background-color: var(--orange);*/
-                }
 }
+
+
+
+.swiper--results {
+
+}
+    @media (740px <= width) {
+
+        .swiper--results {
+            overflow: visible;
+        }
+            .swiper--results .swiper-slide {
+                width: 680px;
+            }
+    }

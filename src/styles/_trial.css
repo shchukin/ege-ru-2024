@@ -1,0 +1,7 @@
+.trial {
+    margin-top: 120px;
+}
+    .trial__panel {
+        background-color: var(--orange);
+        border-radius: 20px;
+    }

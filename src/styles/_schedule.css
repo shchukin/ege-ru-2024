@@ -68,4 +68,9 @@
             .schedule__submit {
                 margin-top: 40px;
             }
+                @media (width < 370px) {
+                    .schedule__submit .button__icon {
+                        display: none;
+                    }
+                }
 }

@@ -144,10 +144,9 @@
                 }
                     .faq__question {
                         /*position: relative;*/
-                        /*width: calc(100% + 40px);*/
+                        width: 100%;
                         margin-left: 0;
                         margin-right: 0;
-                        width: auto;
                         /*padding: 15px var(--right-padding) 15px 20px;*/
                         padding-top: 12px;
                         padding-bottom: 12px;

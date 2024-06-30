@@ -1,5 +1,5 @@
 .schedule {
-    margin-top: 107px;
+    margin-top: 123px;
     display: flex;
     align-items: flex-start;
     gap: 100px;
@@ -28,7 +28,6 @@
         .schedule__submit {
             margin-top: 36px;
         }
-
 
 
 @media (width < 740px) {

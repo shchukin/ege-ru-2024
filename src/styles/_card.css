@@ -1,0 +1,12 @@
+.card {
+    display: flex;
+    align-items: flex-start;
+}
+    .card__preview {
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+        .card__photo {
+            vertical-align: top;
+        }

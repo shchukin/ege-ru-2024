@@ -98,7 +98,7 @@
     }
 
     .button--secondary.button--loading::after {
-        filter: invert(1);
+        background-image: url("../vectors/button-loading-orange.svg");
     }
 
     .button--loading .button__icon {
@@ -128,7 +128,7 @@
     }
 
     .button--secondary.button--success::after {
-        filter: invert(1);
+        background-image: url("../vectors/button-success-orange.svg");
     }
 
     .button--success .button__icon {
@@ -157,7 +157,7 @@
     }
 
     .button--secondary.button--warning::after {
-        filter: invert(1);
+        background-image: url("../vectors/button-warning-orange.svg");
     }
 
     .button--warning .button__icon {

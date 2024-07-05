@@ -73,20 +73,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const subscriptionSuccessAlert = document.querySelector('#subscriptionSuccessAlert');
     const subscriptionFailureAlert = document.querySelector('#subscriptionFailureAlert');
-    const subscriptionForm = document.querySelector('.subscriptionForm');
+    const subscriptionForm = document.querySelector('#subscriptionForm');
+    const subscriptionInputs = subscriptionForm.querySelectorAll('input, textarea, select');
+
+    function disableSubscriptionInputs() {
+        subscriptionInputs.forEach(input => input.setAttribute('disabled', 'disabled'));
+    }
+
+    function enableSubscriptionInputs() {
+        subscriptionInputs.forEach(input => input.removeAttribute('disabled'));
+    }
 
     document.querySelector('.subscription__submit').addEventListener('click', function() {
         const button = this;
+
         if (!button.classList.contains('button--loading') && !button.classList.contains('button--success')) {
             button.classList.add('button--loading');
+
+            // Disable all inputs
+            disableSubscriptionInputs();
 
             /* Представим, что 3000ms отправляем данные */
             setTimeout(function() {
 
-                /* Как только пришёл ответ убираем button--loading */
+                /* Как только пришёл ответ убираем button--loading ... */
                 button.classList.remove('button--loading');
 
-                /* И дальше развилка, пусть для примера будет рандом 50/50: */
+                /* ... дальше развилка, пусть для примера будет рандом 50/50: */
                 if (Math.random() < 0.5) {
 
                     /* Если данные успешно отправлены: */
@@ -95,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(function() {
                         button.classList.remove('button--success');
                         subscriptionSuccessAlert.style.display = 'none';
+                        enableSubscriptionInputs();
                     }, 4500);
 
                 } else {
@@ -108,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     button.classList.add('button--warning');
                     setTimeout(function() {
                         button.classList.remove('button--warning');
+                        enableSubscriptionInputs();
                     }, 2000);
 
                 }
@@ -116,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
     });
+
 
     document.querySelectorAll('.alert').forEach(function(alert) {
         alert.addEventListener('click', function() {

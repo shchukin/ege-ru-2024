@@ -1,17 +1,20 @@
 .subscription {
 
 }
-    .subscription__field {
-        margin-top: 9px;
-    }
+    .subscription__body {
 
-    .subscription__field:first-child {
-        margin-top: 0;
     }
+        .subscription__field {
+            margin-top: 9px;
+        }
 
-    .subscription__terms {
-        margin-top: 23px;
-    }
+        .subscription__field:first-child {
+            margin-top: 0;
+        }
+
+        .subscription__terms {
+            margin-top: 23px;
+        }
 
     .subscription__submit {
         margin-top: 28px;

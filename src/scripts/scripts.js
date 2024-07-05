@@ -71,8 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Форма пробного урока */
 
-    const $subscriptionSuccessAlert = document.querySelector('#subscriptionSuccessAlert');
-    const $subscriptionFailureAlert = document.querySelector('#subscriptionFailureAlert');
+    const subscriptionSuccessAlert = document.querySelector('#subscriptionSuccessAlert');
+    const subscriptionFailureAlert = document.querySelector('#subscriptionFailureAlert');
+    const subscriptionForm = document.querySelector('.subscriptionForm');
 
     document.querySelector('.subscription__submit').addEventListener('click', function() {
         const button = this;
@@ -90,10 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     /* Если данные успешно отправлены: */
                     button.classList.add('button--success');
-                    $subscriptionSuccessAlert.style.display = 'block';
+                    subscriptionSuccessAlert.style.display = 'block';
                     setTimeout(function() {
                         button.classList.remove('button--success');
-                        $subscriptionSuccessAlert.style.display = 'none';
+                        subscriptionSuccessAlert.style.display = 'none';
                     }, 4500);
 
                 } else {
@@ -101,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     /* Если данные не были отправлены: */
 
                     // Уведомление в этом случае показываем, и НЕ убираем -- пусть висит, пока пользователь не увидит и явно не закроет, или не начнёт заново заполнять форму
-                    $subscriptionFailureAlert.style.display = 'block';
+                    subscriptionFailureAlert.style.display = 'block';
 
                     // На кнопке показываем иконку, но всего на пару секунд:
                     button.classList.add('button--warning');

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* Faq accordion */
+    /* Аккордеон в FAQ */
 
     const faqQuestions = document.querySelectorAll('.faq__question');
 
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    /* Blog Swiper */
+    /* Слайдер "Blog" */
 
     new Swiper('.swiper--blog', {
         slidesPerView: 1,
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    /* Results Swiper */
+    /* Слайдер "Results" */
 
     new Swiper('.swiper--results', {
 
@@ -69,64 +69,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    /* Subscription form */
+    /* Форма пробного урока */
 
-    (function($) {
-        $('.subscription__submit').on('click', function () {
-            var $this = $(this);
-            if ( ! $this.hasClass('button--loading') && ! $this.hasClass('button--success') ) {
-                $this.addClass('button--loading');
+    document.querySelector('.subscription__submit').addEventListener('click', function() {
+        const button = this;
+        if (!button.classList.contains('button--loading') && !button.classList.contains('button--success')) {
+            button.classList.add('button--loading');
 
-                /* Представим, что 3000ms отправляем данные */
-                setTimeout(function () {
+            /* Представим, что 3000ms отправляем данные */
+            setTimeout(function() {
 
-                    /* Как только пришёл ответ убираем button--loading */
-                    $this.removeClass('button--loading');
+                /* Как только пришёл ответ убираем button--loading */
+                button.classList.remove('button--loading');
 
-                    /* И дальше развилка, пусть для примера будует рандом 50/50: */
-                    if (Math.random() < 0.5) {
+                /* И дальше развилка, пусть для примера будет рандом 50/50: */
+                if (Math.random() < 0.5) {
 
-                        /* Если данные успешно отправлены: */
-                        $this.addClass('button--success');
-                        $('.alert--success').fadeIn(200);
+                    /* Если данные успешно отправлены: */
+                    button.classList.add('button--success');
+                    document.querySelector('.alert--success').style.display = 'block';
+                    setTimeout(function() {
+                        button.classList.remove('button--success');
+                        document.querySelector('.alert--success').style.display = 'none';
+                    }, 6000);
 
-                        setTimeout(function () {
-                            $this.removeClass('button--success');
-                            $('.alert--success').fadeOut(200);
-                        }, 3000);
+                } else {
 
-                    } else {
+                    /* Если данные не были отправлены: */
 
-                        /* Если данные не были отправлены: */
-                        $this.addClass('button--warning');
+                    // Уведомление в этом случае показываем, и НЕ убираем -- пусть висит, пока пользователь не увидит и явно не закроет, или не начнёт заново заполнять форму
+                    document.querySelector('.alert--danger').style.display = 'block';
 
-                        $('.alert--danger').fadeIn(200);
-                        setTimeout(function () {
-                            $this.removeClass('button--warning');
-                            /* Уведомление в этом случае НЕ убираем -- пусть висит,
-                               пока пользователь не увидит и явно не закроет, или
-                               не начнёт заново заполнять форму */
-                        }, 3000);
-                    }
+                    // На кнопке показываем иконку, но всего на пару секунд:
+                    button.classList.add('button--warning');
+                    setTimeout(function() {
+                        button.classList.remove('button--warning');
+                    }, 2000);
 
-                }, 3000);
+                }
 
-            }
+            }, 3000);
+
+        }
+    });
+
+    document.querySelectorAll('.alert').forEach(function(alert) {
+        alert.addEventListener('click', function() {
+            alert.style.display = 'none';
         });
-    })(jQuery);
+    });
 
+    document.addEventListener('keyup', function(event) {
+        if (event.keyCode === 27) { // Esc
+            document.querySelectorAll('.alert').forEach(function(alert) {
+                alert.style.display = 'none';
+            });
+        }
+    });
 
-    (function($) {
-        $('.alert').on('click', function () {
-            $('.alert').fadeOut();
-        });
-
-        $(document).on('keyup', function(event) {
-            if (event.keyCode === 27) { /* Esc */
-                $('.alert').fadeOut();
-            }
-        });
-    })(jQuery);
 
 
 });

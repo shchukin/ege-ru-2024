@@ -70,25 +70,6 @@
     color: var(--disabled-color);
 }
 
-
-/* Error */
-.input--error {
-
-}
-    .input--error .input__widget {
-        color: var(--error);
-        border-color: var(--error);
-    }
-
-    .input--error .input__widget:hover {
-        border-color: var(--input-border-hover-and-focus);
-    }
-
-    .input--error .input__widget::placeholder {
-        color: var(--error);
-    }
-
-
 /* stylelint-disable */
 textarea.input__widget {
     height: auto; /* user rows="" attribute to set a default height */
@@ -103,7 +84,7 @@ select.input__widget {
     appearance: none;
     padding-right: 50px;
     background-image: url("../vectors/dropdown.svg");
-    background-size: 16px 16px;
+    background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: right 16px center;
     cursor: pointer;
@@ -120,32 +101,4 @@ select.input__widget:disabled {
     cursor: default;
 }
 
-
-
-/* Error */
-.input--error select.input__widget {
-    background-image: url("../vectors/dropdown-error.svg");
-}
-
-.input--error select.input__widget:hover {
-    border-color: var(--error);
-}
-
-.input--placeholder-is-chosen {
-
-}
-    .input--placeholder-is-chosen select.input__widget {
-        color: var(--placeholder-color);
-    }
-
-    .input--placeholder-is-chosen select.input__widget:disabled {
-        color: var(--disabled-color);
-    }
-
-    .input--placeholder-is-chosen.input--error select.input__widget {
-        color: var(--error);
-    }
-        .input--placeholder-is-chosen select.input__widget option {
-            color: #000000; /* Browsers on Windows inherit grey color from <select> to <option>`s. Reset it. */
-        }
 

@@ -85,13 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
     /* Форма пробного урока */
 
     const subscriptionSuccessAlert = document.querySelector('#subscriptionSuccessAlert');
     const subscriptionFailureAlert = document.querySelector('#subscriptionFailureAlert');
     const subscriptionForm = document.querySelector('#subscriptionForm');
     const subscriptionInputs = subscriptionForm.querySelectorAll('input, textarea, select');
+    const button = subscriptionForm.querySelector('.subscription__submit');
 
     /* На время отправки формы инпуты должны блокироваться. Пишем функции для этого: */
     function disableSubscriptionInputs() {
@@ -111,8 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Отправка */
 
-    document.querySelector('.subscription__submit').addEventListener('click', function() {
-        const button = this;
+    subscriptionForm.addEventListener('submit', function(event) {
+
+        event.preventDefault();
+
 
         /* Если с прошлой попытки висит уведомление об ошибке: */
         subscriptionFailureAlert.style.display = 'none';
@@ -158,5 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
 
     });
+
 
 });

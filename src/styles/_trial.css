@@ -11,6 +11,7 @@
             width: 581px;
             height: 517px;
             background-color: var(--beige);
+            background-image: url("../images/trial-background.svg");
             border-radius: 20px;
         }
             .trial__photo {

@@ -74,15 +74,27 @@ document.addEventListener('DOMContentLoaded', () => {
     (function($) {
         $('.subscription__submit').on('click', function () {
             var $this = $(this);
-            if ( ! $this.hasClass('button--loading') &&  ! $this.hasClass('button--success') ) {
+            if ( ! $this.hasClass('button--loading') && ! $this.hasClass('button--success') ) {
                 $this.addClass('button--loading');
-                setTimeout(function () {
-                    $this.removeClass('button--loading').addClass('button--success');
-                    $('.alert').fadeIn(200);
-                }, 3000);
-                setTimeout(function () {
-                    $this.removeClass('button--success');
-                }, 4500);
+
+                if (Math.random() < 0.5) {
+                    setTimeout(function () {
+                        $this.removeClass('button--loading').addClass('button--success');
+                        $('.alert--success').fadeIn(200);
+                    }, 3000);
+                    setTimeout(function () {
+                        $this.removeClass('button--success');
+                        $('.alert--success').fadeOut(200);
+                    }, 6000);
+                } else {
+                    setTimeout(function () {
+                        $this.removeClass('button--loading').addClass('button--warning');
+                        $('.alert--danger').fadeIn(200);
+                    }, 3000);
+                    setTimeout(function () {
+                        $this.removeClass('button--warning');
+                    }, 6000);
+                }
             }
         });
     })(jQuery);

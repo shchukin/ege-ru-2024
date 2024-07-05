@@ -499,7 +499,25 @@
                             Запишите вашего ребенка на&nbsp;бесплатный пробный урок с&nbsp;экспертом ЕГЭ уже сейчас!
                         </h2>
                         <div class="trial__frame">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque eligendi porro vel. Corporis deleniti deserunt fuga libero nobis quam, quas totam. Adipisci excepturi quam quis! Debitis nam nostrum obcaecati quod ullam voluptas. Architecto delectus ducimus eaque iste minus! Ab aliquid blanditiis dolore dolorem dolores dolorum ea error ex, facere fugiat fugit illo illum laborum magnam maxime minus nemo nihil nobis numquam, odio perspiciatis provident quia quod rem repellendus rerum sed tenetur ullam vel velit? Dolorum et hic quasi veniam! Consectetur corporis cumque, distinctio ea eligendi maxime nam nemo nobis officia quibusdam quos rerum, sint temporibus tenetur vitae voluptate voluptatibus?
+                            <div class="trial__form">
+                                <form class="subscription subscription_vertical">
+                                    <div class="subscription__field input">
+                                        <input class="input__widget" type="tel" placeholder="Ваше имя">
+                                    </div>
+                                    <div class="subscription__field input">
+                                        <input class="input__widget" type="tel" placeholder="Телефон">
+                                    </div>
+                                    <div class="subscription__terms">
+                                        Согласен(а) на&nbsp;обработку персональных данных
+                                    </div>
+                                    <button class="subscription__submit button button--secondary" type="button">
+                                        Записаться на пробный урок
+                                        <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25">
+                                            <path d="M11.767 4.955c.44-.44 1.152-.44 1.591 0l6.75 6.75c.44.439.44 1.151 0 1.59l-6.75 6.75a1.125 1.125 0 0 1-1.591-1.59l4.83-4.83H4.686a1.125 1.125 0 0 1 0-2.25h11.91l-4.83-4.83a1.125 1.125 0 0 1 0-1.59Z"/>
+                                        </svg>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1070,6 +1088,18 @@
 
         </div>
 
+        <!-- Alert -->
+        <div class="alert alert--success" style="display: none;">
+            <div class="alert__label">
+                Спасибо! Вы&nbsp;подписаны на&nbsp;рассылку.<br class="hide hide_mobile">
+                На&nbsp;вашу почту скоро придут материалы и&nbsp;шпаргалки по&nbsp;ЕГЭ.
+            </div>
+            <button class="alert__dismiss" type="button">
+                Закрыть
+            </button>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="../vendors/swiper/swiper-bundle.min.js"></script>
         <script src="../scripts/scripts.js"></script>
 

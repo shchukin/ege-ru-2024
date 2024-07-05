@@ -43,10 +43,16 @@
 
                 .trial__frame {
                     margin-top: 37px;
+                    padding: 31px 20px 26px;
                     width: 563px;
                     height: 291px;
                     background-image: url("../vectors/trial-frame.svg");
                 }
+                    .trial__form {
+                        max-width: 400px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
 
 
 

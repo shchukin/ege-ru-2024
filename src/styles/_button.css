@@ -91,7 +91,7 @@
         margin-top: -12px;
         margin-left: -12px;
         background-image: url("../vectors/button-loading.svg");
-        background-size: 24px 24px;
+        background-size: 32px 32px;
         background-repeat: no-repeat;
         background-position: center center;
         animation: button-loading-spin 1s steps(12) infinite;

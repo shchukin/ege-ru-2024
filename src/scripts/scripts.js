@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const subscriptionForm = document.querySelector('#subscriptionForm');
     const subscriptionInputs = subscriptionForm.querySelectorAll('input, textarea, select');
 
+    /* На время отправки формы инпуты должны блокироваться. Пишем функции для этого: */
     function disableSubscriptionInputs() {
         subscriptionInputs.forEach(input => input.setAttribute('disabled', 'disabled'));
     }
@@ -101,52 +102,61 @@ document.addEventListener('DOMContentLoaded', () => {
         subscriptionInputs.forEach(input => input.removeAttribute('disabled'));
     }
 
+    /* Если пользователь начал взаимодействовать с инпутами, то убираем уведомления с прошлой попытки отправки: */
+
+    subscriptionInputs.forEach(input => input.addEventListener('input', () => {
+        subscriptionFailureAlert.style.display = 'none';
+    }));
+
+
+    /* Отправка */
+
     document.querySelector('.subscription__submit').addEventListener('click', function() {
         const button = this;
 
-        if (!button.classList.contains('button--loading') && !button.classList.contains('button--success')) {
-            button.classList.add('button--loading');
+        /* Если с прошлой попытки висит уведомление об ошибке: */
+        subscriptionFailureAlert.style.display = 'none';
 
-            // Disable all inputs
-            disableSubscriptionInputs();
+        /* Начинаем отправку данных, для начала блокируем форму */
+        disableSubscriptionInputs();
+        button.classList.add('button--loading');
 
-            /* Представим, что 3000ms отправляем данные */
-            setTimeout(function() {
+        /* Представим, что 3000ms отправляем данные */
+        setTimeout(function() {
 
-                /* Как только пришёл ответ убираем button--loading ... */
-                button.classList.remove('button--loading');
+            /* Как только пришёл ответ убираем button--loading ... */
+            button.classList.remove('button--loading');
 
-                /* ... дальше развилка, пусть для примера будет рандом 50/50: */
-                if (Math.random() < 0.5) {
+            /* ... дальше развилка, пусть для примера будет рандом 50/50: */
+            if (Math.random() < 0.5) {
 
-                    /* Если данные успешно отправлены: */
-                    button.classList.add('button--success');
-                    subscriptionSuccessAlert.style.display = 'block';
-                    setTimeout(function() {
-                        button.classList.remove('button--success');
-                        subscriptionSuccessAlert.style.display = 'none';
-                        enableSubscriptionInputs();
-                    }, 4500);
+                /* Если данные успешно отправлены -- показываем уведомление и галочку на кнопке на 4.5 секунды: */
+                button.classList.add('button--success');
+                subscriptionSuccessAlert.style.display = 'block';
+                setTimeout(function() {
+                    button.classList.remove('button--success');
+                    subscriptionSuccessAlert.style.display = 'none';
+                    enableSubscriptionInputs();
+                }, 4500);
 
-                } else {
+            } else {
 
-                    /* Если данные не были отправлены: */
+                /* Если данные не были отправлены: */
 
-                    // Уведомление в этом случае показываем, и НЕ убираем -- пусть висит, пока пользователь не увидит и явно не закроет, или не начнёт заново заполнять форму
-                    subscriptionFailureAlert.style.display = 'block';
+                // Уведомление в этом случае показываем, и НЕ убираем -- пусть висит, пока пользователь не увидит и явно не закроет, или не начнёт заново заполнять форму:
+                subscriptionFailureAlert.style.display = 'block';
 
-                    // На кнопке показываем иконку, но всего на пару секунд:
-                    button.classList.add('button--warning');
-                    setTimeout(function() {
-                        button.classList.remove('button--warning');
-                        enableSubscriptionInputs();
-                    }, 2000);
+                // На кнопке показываем иконку восклицательного знака, но всего на пару секунд:
+                button.classList.add('button--warning');
+                setTimeout(function() {
+                    button.classList.remove('button--warning');
+                    enableSubscriptionInputs();
+                }, 2000);
 
-                }
+            }
 
-            }, 3000);
+        }, 3000);
 
-        }
     });
 
 });

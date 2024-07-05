@@ -1089,14 +1089,25 @@
         </div>
 
         <!-- Alert -->
-        <div class="alert alert--success" style="display: none;">
-            <div class="alert__label">
-                Спасибо! Вы&nbsp;подписаны на&nbsp;рассылку.<br class="hide hide_mobile">
-                На&nbsp;вашу почту скоро придут материалы и&nbsp;шпаргалки по&nbsp;ЕГЭ.
+        <div class="notifications-center">
+            <div class="alert alert--success" style="display: none;">
+                <div class="alert__label">
+                    Спасибо! Вы&nbsp;записаны на бесплатный пробный урок.<br class="desktop-only">
+                    На&nbsp;вашу почту скоро придёт подтверждение.
+                </div>
+                <button class="alert__dismiss" type="button">
+                    Закрыть
+                </button>
             </div>
-            <button class="alert__dismiss" type="button">
-                Закрыть
-            </button>
+            <div class="alert alert--danger" style="display: none;">
+                <div class="alert__label">
+                    Во время отправки данных произошла ошибка.<br class="desktop-only">
+                    Проверьте ваше соединение и&nbsp;попробуйте позже.
+                </div>
+                <button class="alert__dismiss" type="button">
+                    Закрыть
+                </button>
+            </div>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>

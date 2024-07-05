@@ -1,9 +1,5 @@
 .alert {
-    position: fixed;
-    z-index: 2000;
-    top: 15px;
-    left: 15px;
-    right: 15px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +10,10 @@
     line-height: 20px;
     color: #FFFFFF;
     text-align: center;
+}
+
+.alert + .alert {
+    margin-top: 15px;
 }
 
 .alert--success {
@@ -33,13 +33,10 @@
     }
 
 
-@media (min-width: 768px) {
+@media (740px <= width) {
+
     .alert {
-        top: 20px;
-        right: auto;
-        left: 50%;
-        margin-left: -300px;
-        width: 600px;
+
         padding: 19px 50px 21px;
     }
         .alert__label {
@@ -58,7 +55,7 @@
             background-color: transparent;
             padding: 0;
             border: none;
-            background-image: url("../vectors/alert__dismiss.svg");
+            background-image: url("../vectors/alert-dismiss.svg");
             background-size: 24px 24px;
             background-repeat: no-repeat;
             background-position: center center;

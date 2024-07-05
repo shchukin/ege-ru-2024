@@ -69,6 +69,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+    /* Уведомления */
+
+    document.querySelectorAll('.alert').forEach(function(alert) {
+        alert.addEventListener('click', function() {
+            alert.style.display = 'none';
+        });
+    });
+
+    document.addEventListener('keyup', function(event) {
+        if (event.keyCode === 27) {
+            document.querySelectorAll('.alert').forEach(function(alert) {
+                alert.style.display = 'none';
+            });
+        }
+    });
+
+
     /* Форма пробного урока */
 
     const subscriptionSuccessAlert = document.querySelector('#subscriptionSuccessAlert');
@@ -131,22 +148,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
     });
-
-
-    document.querySelectorAll('.alert').forEach(function(alert) {
-        alert.addEventListener('click', function() {
-            alert.style.display = 'none';
-        });
-    });
-
-    document.addEventListener('keyup', function(event) {
-        if (event.keyCode === 27) {
-            document.querySelectorAll('.alert').forEach(function(alert) {
-                alert.style.display = 'none';
-            });
-        }
-    });
-
-
 
 });

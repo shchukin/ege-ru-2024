@@ -71,6 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Форма пробного урока */
 
+    const $subscriptionSuccessAlert = document.querySelector('#subscriptionSuccessAlert');
+    const $subscriptionFailureAlert = document.querySelector('#subscriptionFailureAlert');
+
     document.querySelector('.subscription__submit').addEventListener('click', function() {
         const button = this;
         if (!button.classList.contains('button--loading') && !button.classList.contains('button--success')) {
@@ -87,18 +90,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     /* Если данные успешно отправлены: */
                     button.classList.add('button--success');
-                    document.querySelector('.alert--success').style.display = 'block';
+                    $subscriptionSuccessAlert.style.display = 'block';
                     setTimeout(function() {
                         button.classList.remove('button--success');
-                        document.querySelector('.alert--success').style.display = 'none';
-                    }, 6000);
+                        $subscriptionSuccessAlert.style.display = 'none';
+                    }, 4500);
 
                 } else {
 
                     /* Если данные не были отправлены: */
 
                     // Уведомление в этом случае показываем, и НЕ убираем -- пусть висит, пока пользователь не увидит и явно не закроет, или не начнёт заново заполнять форму
-                    document.querySelector('.alert--danger').style.display = 'block';
+                    $subscriptionFailureAlert.style.display = 'block';
 
                     // На кнопке показываем иконку, но всего на пару секунд:
                     button.classList.add('button--warning');
@@ -120,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('keyup', function(event) {
-        if (event.keyCode === 27) { // Esc
+        if (event.keyCode === 27) {
             document.querySelectorAll('.alert').forEach(function(alert) {
                 alert.style.display = 'none';
             });

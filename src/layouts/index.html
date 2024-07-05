@@ -502,7 +502,7 @@
                             <div class="trial__form">
                                 <form class="subscription subscription_vertical">
                                     <div class="subscription__field input">
-                                        <input class="input__widget" type="tel" placeholder="Ваше имя">
+                                        <input class="input__widget" type="text" placeholder="Ваше имя">
                                     </div>
                                     <div class="subscription__field input">
                                         <input class="input__widget" type="tel" placeholder="Телефон">
@@ -1090,7 +1090,7 @@
 
         <!-- Alert -->
         <div class="notifications-center">
-            <div class="alert alert--success" style="display: none;">
+            <div class="alert alert--success" style="display: none;" id="subscriptionSuccessAlert">
                 <div class="alert__label">
                     Спасибо! Вы&nbsp;записаны на бесплатный пробный урок.<br class="desktop-only">
                     На&nbsp;вашу почту скоро придёт подтверждение.
@@ -1099,7 +1099,7 @@
                     Закрыть
                 </button>
             </div>
-            <div class="alert alert--danger" style="display: none;">
+            <div class="alert alert--danger" style="display: none;" id="subscriptionFailureAlert">
                 <div class="alert__label">
                     Во время отправки данных произошла ошибка.<br class="desktop-only">
                     Проверьте ваше соединение и&nbsp;попробуйте позже.

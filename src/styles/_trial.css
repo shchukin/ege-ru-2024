@@ -1,7 +1,21 @@
 .trial {
     margin-top: 120px;
+
 }
     .trial__panel {
+        padding: 39px 40px 40px;
         background-color: var(--orange);
         border-radius: 20px;
     }
+        .trial__illustration {
+            width: 581px;
+            height: 517px;
+            background-color: var(--beige);
+            border-radius: 20px;
+        }
+            .trial__photo {
+                margin-top: -39px;
+                margin-bottom: -40px;
+                margin-left: 29px;
+                vertical-align: top;
+            }

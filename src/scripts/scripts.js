@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         navigation: {
-            nextEl: '.slider__button--next',
-            prevEl: '.slider__button--prev',
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
         },
 
         breakpoints: {

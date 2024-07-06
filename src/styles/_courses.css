@@ -44,9 +44,7 @@
         margin-top: 90px;
     }
         .courses__heading {
-            /*margin-top: 0;*/
-            /*margin-bottom: 0;*/
-            /*text-align: center;*/
+
         }
 
         .courses__list {
@@ -57,15 +55,10 @@
             gap: 12px;
         }
             .courses__item {
-                /*display: flex;*/
-                /*align-items: center;*/
-                /*justify-content: center;*/
                 padding: 14px 20px;
-                /*background-color: rgb(255 255 255 / 80%);*/
                 border-radius: var(--radius);
                 font-size: 20px;
                 line-height: 27px;
-                /*text-align: center;*/
             }
 
 }

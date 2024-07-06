@@ -31,11 +31,8 @@
     .ready {
         margin-top: 90px;
         display: block;
-        /*align-items: center;*/
-        /*gap: 127px;*/
     }
         .ready__stamp {
-            /*flex-shrink: 0;*/
             margin-left: auto;
             margin-right: auto;
         }
@@ -44,10 +41,6 @@
             margin-top: 27px;
         }
             .ready__heading {
-                /*margin-top: 0;*/
-                /*margin-bottom: 0;*/
-                /*font-size: 36px;*/
-                /*line-height: 47px;*/
                 text-align: center;
             }
                 .ready__heading.title,

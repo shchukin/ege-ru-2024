@@ -20,8 +20,6 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
         gap: 24px;
-        /*align-items: center;*/
-        /*justify-content: space-between;*/
     }
         .partners__item {
 
@@ -34,6 +32,5 @@
             .partners__logo {
                 width: 100%;
                 height: auto;
-                /*vertical-align: top;*/
             }
 }

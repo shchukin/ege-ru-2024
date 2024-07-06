@@ -35,19 +35,19 @@
 
         }
             .subscription__field {
-                /*margin-top: 9px;*/
+
             }
 
             .subscription__field:first-child {
-                /*margin-top: 0;*/
+
             }
 
             .subscription__terms {
-                /*margin-top: 19px;*/
+
             }
 
         .subscription__submit {
-            /*margin-top: 26px;*/
+
         }
             .subscription__submit.button,
             .subscription__submit .button {

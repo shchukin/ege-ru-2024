@@ -19,18 +19,10 @@
 
 
     .stamp {
-        /*display: flex;*/
-        /*align-items: center;*/
-        /*justify-content: center;*/
         width: 151px;
         height: 151px;
-        /*background-image: url("../vectors/stamp.svg");*/
-        /*background-size: contain;*/
-        /*background-repeat: no-repeat;*/
-        /*background-position: center center;*/
     }
         .stamp__icon {
-            /*vertical-align: top;*/
             width: 50px;
             height: 50px;
         }

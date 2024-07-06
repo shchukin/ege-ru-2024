@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         navigation: {
-            prevEl: '.swiper-button-prev',
-            nextEl: '.swiper-button-next',
+            prevEl: '#feedback-prev',
+            nextEl: '#feedback-next',
         },
 
         breakpoints: {

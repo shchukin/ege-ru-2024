@@ -23,3 +23,46 @@
         .subscription__submit .button {
             width: 100%;
         }
+
+
+
+@media (width < 740px) {
+
+    .subscription {
+
+    }
+        .subscription__body {
+
+        }
+            .subscription__field {
+                /*margin-top: 9px;*/
+            }
+
+            .subscription__field:first-child {
+                /*margin-top: 0;*/
+            }
+
+            .subscription__terms {
+                /*margin-top: 19px;*/
+            }
+
+        .subscription__submit {
+            /*margin-top: 26px;*/
+        }
+            .subscription__submit.button,
+            .subscription__submit .button {
+                padding-left: 11px;
+                padding-right: 11px;
+            }
+                .subscription__submit .button__icon {
+                    display: none;
+                }
+
+                @media (width < 350px) {
+
+                    .subscription__submit.button,
+                    .subscription__submit .button {
+                        font-size: 16px;
+                    }
+                }
+}

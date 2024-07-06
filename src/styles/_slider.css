@@ -1,0 +1,28 @@
+.slider {
+
+}
+    /* Стрелочки */
+
+    .slider__button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100px;
+        background: purple;
+    }
+
+    .slider__button--prev {
+        left: -100px;
+    }
+
+    .slider__button--next {
+        right: -100px;
+    }
+
+        .swiper-arrow {
+            vertical-align: top;
+        }
+
+        .slider__button::after {
+            display: none;
+        }

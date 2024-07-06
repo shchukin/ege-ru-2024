@@ -95,6 +95,8 @@
 }
     @media (740px <= width) {
 
+        /* Слайды */
+
         .swiper--feedback .swiper-slide {
             width: 330px;
         }
@@ -102,6 +104,15 @@
         .swiper--feedback .swiper-slide--wide {
             width: 446px;
         }
+
+
+        /* Пагинация */
+
+        .swiper--feedback .swiper-pagination {
+            display: none;
+        }
+
+
     }
 
 

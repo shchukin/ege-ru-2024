@@ -2,8 +2,7 @@
     margin-top: 93px;
     display: grid;
     align-items: flex-start;
-    grid-template-columns: 1fr 696px;
-    gap: 63px;
+    grid-template-columns: 684fr 696px;
 }
     .welcome__intro {
 
@@ -11,7 +10,6 @@
         .welcome__heading {
             margin-top: 0;
             margin-bottom: 0;
-            max-width: 600px;
             font-weight: bold;
             font-size: 40px;
             line-height: 51px;

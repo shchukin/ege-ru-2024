@@ -1,0 +1,92 @@
+.welcome {
+    margin-top: 93px;
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 1fr 696px;
+    gap: 63px;
+}
+    .welcome__intro {
+
+    }
+        .welcome__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            max-width: 600px;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 51px;
+        }
+
+        .welcome__action {
+            margin-top: 37px;
+        }
+
+        .welcome__rating {
+            margin-top: 30px;
+        }
+            .welcome__rating-heading {
+
+            }
+
+            .welcome__rating-widget {
+                margin-top: 7px;
+                margin-left: -8px; /* внутренний паддинг виджета */
+            }
+
+    .welcome__features {
+        min-height: 402px;
+        padding-top: 38px;
+        padding-bottom: 37px;
+        background-image: url("../vectors/welcome.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+        .welcome__grid {
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            width: fit-content;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr;
+            gap: 27px 47px;
+        }
+            .welcome__tile {
+                width: 243px;
+                background-color: var(--yellow);
+                border-radius: 30px;
+                padding-right: 10px;
+                padding-bottom: 10px;
+            }
+                .welcome__tile-inner {
+                    min-height: 135px;
+                    display: flex;
+                    align-items: center;
+                    padding: 19px 24px 17px;
+                    background-color: #FFFFFF;
+                    border-radius: 20px;
+                }
+                    .welcome__tile-label {
+                        font-size: 24px;
+                        line-height: 33px;
+                        text-align: center;
+                    }
+
+            .welcome__tile--groups {
+
+            }
+
+            .welcome__tile--price {
+
+            }
+
+            .welcome__tile--newcomers {
+                grid-column: 1 / -1;
+                width: 456px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+                .welcome__tile--newcomers .welcome__tile-inner {
+                    padding-left: 60px;
+                    padding-right: 60px;
+                }

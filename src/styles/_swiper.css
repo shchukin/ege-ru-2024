@@ -117,8 +117,10 @@
 
         .swiper-button {
             width: calc( (100vw - 1146px - 20px) / 2 );
+            min-width: 57px;
         }
     }
+
 
 
 

@@ -94,8 +94,13 @@
 
 }
     @media (740px <= width) {
+
         .swiper--feedback .swiper-slide {
             width: 330px;
+        }
+
+        .swiper--feedback .swiper-slide--wide {
+            width: 446px;
         }
     }
 

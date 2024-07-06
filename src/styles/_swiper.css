@@ -134,7 +134,7 @@
     @media (width < 1420px) {
 
         .swiper-button {
-            width: calc( (100vw - 1146px - 20px) / 2 );
+            width: calc((100vw - 1146px - 20px) / 2);
             min-width: 57px;
         }
     }
@@ -164,7 +164,6 @@
     .swiper--blog {
         overflow: visible;
     }
-
 }
 
 
@@ -188,26 +187,26 @@
 .swiper--feedback {
 
 }
-    @media (740px <= width) {
 
-        /* Слайды */
+@media (740px <= width) {
 
-        .swiper--feedback .swiper-slide {
-            width: 330px;
-        }
+    /* Слайды */
 
-        .swiper--feedback .swiper-slide--wide {
-            width: 446px;
-        }
-
-
-        /* Пагинация */
-
-        .swiper--feedback .swiper-pagination {
-            display: none;
-        }
-
+    .swiper--feedback .swiper-slide {
+        width: 330px;
     }
+
+    .swiper--feedback .swiper-slide--wide {
+        width: 446px;
+    }
+
+
+    /* Пагинация */
+
+    .swiper--feedback .swiper-pagination {
+        display: none;
+    }
+}
 
 
 

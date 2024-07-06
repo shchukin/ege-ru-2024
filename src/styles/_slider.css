@@ -7,22 +7,35 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        width: 100px;
-        background: purple;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color var(--transition-hover);
+    }
+
+    .slider__button:not(.swiper-button-disabled):hover {
+        background-color: rgb(255 255 255 / 40%);
+        border-radius: 8px;
+    }
+
+    .slider__button.swiper-button-disabled {
+        opacity: 50%;
+        cursor: default;
     }
 
     .slider__button--prev {
-        left: -100px;
+        left: -130px;
     }
 
     .slider__button--next {
-        right: -100px;
+        right: -130px;
     }
-
-        .swiper-arrow {
+        .slider__arrow {
             vertical-align: top;
         }
 
-        .slider__button::after {
-            display: none;
-        }

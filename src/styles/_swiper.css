@@ -86,3 +86,25 @@
                 width: 680px;
             }
     }
+
+
+
+
+.swiper--feedback {
+
+}
+    @media (740px <= width) {
+        .swiper--feedback .swiper-slide {
+            width: 330px;
+        }
+    }
+
+
+
+
+
+
+
+
+
+

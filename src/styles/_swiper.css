@@ -10,6 +10,7 @@
 
 
 
+
     /* Точки */
 
     .swiper-pagination-bullets {
@@ -138,6 +139,16 @@
         }
     }
 
+    /* На мобилках стрелки не встречаются: */
+
+    @media (width < 740px) {
+
+        .swiper-button {
+            display: none !important;
+        }
+    }
+
+
 
 
 
@@ -197,7 +208,6 @@
         }
 
     }
-
 
 
 

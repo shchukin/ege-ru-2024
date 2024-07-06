@@ -30,10 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.swiper-button-prev',
         },
 
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-
         breakpoints: {
             740: {
                 slidesPerView: 3,

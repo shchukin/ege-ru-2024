@@ -12,6 +12,7 @@
 
     .term__label {
         position: relative;
+        display: block;
         padding: 11px 0 11px 16px;
         font-size: 12px;
         line-height: 18px;
@@ -23,7 +24,7 @@
     .term__icon {
         position: absolute;
         left: 0;
-        top: 7px;
+        top: 14px;
         display: block;
         width: 11px;
         height: 11px;

@@ -19,6 +19,7 @@
     --input-border: #B3B3B3;
     --input-border-hover-and-focus: #7E7E7E;
     --placeholder-color: #878787;
+    --mobile-button: 360px;
 }
 
 @media (350px <= width < 600px) {

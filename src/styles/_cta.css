@@ -26,7 +26,8 @@
             background-image: none;
         }
             .cta__action {
-
+                width: 100%;
+                max-width: var(--mobile-button);
             }
                 .cta__action .button {
 

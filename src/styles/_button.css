@@ -64,6 +64,7 @@
     background-color: var(--white-hover);
 }
     .button__icon {
+        flex-shrink: 0;
         vertical-align: top;
         fill: currentColor;
     }

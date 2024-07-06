@@ -67,6 +67,8 @@
 
             .schedule__submit {
                 margin-top: 40px;
+                width: 100%;
+                max-width: var(--mobile-button);
             }
                 @media (width < 370px) {
                     .schedule__submit .button__icon {

@@ -140,6 +140,10 @@
 
                 .online__submit {
                     /*margin-top: auto;*/
+                    width: 100%;
+                    max-width: var(--mobile-button);
+                    margin-left: auto;
+                    margin-right: auto;
                 }
                     .online__submit.button,
                     .online__submit .button {

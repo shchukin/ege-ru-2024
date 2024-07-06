@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')),
+        autoHeight: true,
 
         pagination: {
             el: '.swiper-pagination',
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 slidesPerView: "auto",
                 spaceBetween: 20,
                 slidesPerGroup: 3,
+                autoHeight: false
             }
         }
     });

@@ -37,6 +37,7 @@
         min-height: 402px;
         padding-top: 38px;
         padding-bottom: 37px;
+        padding-left: 50px;
         background-image: url("../vectors/welcome.svg");
         background-size: contain;
         background-repeat: no-repeat;

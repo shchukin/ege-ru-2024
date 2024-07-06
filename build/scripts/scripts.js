@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         navigation: {
-            prevEl: '.swiper-button-prev',
-            nextEl: '.swiper-button-next',
+            prevEl: '#feedback-prev',
+            nextEl: '#feedback-next',
         },
 
         breakpoints: {
@@ -79,11 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
-        },
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
         },
 
         scrollbar: {

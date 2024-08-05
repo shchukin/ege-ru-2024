@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>.input</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../styles/style.css?1722836889">
+        <link rel="stylesheet" href="../styles/style.css?1722838150">
     </head>
     <body>
 
@@ -40,6 +40,22 @@
                 <input class="input__widget" type="text" placeholder="Ваше имя" value="Konstantin Konstantinopolsky" disabled>
             </div>
 
+
+            <br>
+            <h2>.input--loading</h2>
+            <p>Атрибут <b><i>:disabled</i></b> в этом кейсе тоже используется</p>
+
+            <div class="input input--loading">
+                <input class="input__widget" type="text" placeholder="Ваше имя" disabled>
+            </div>
+
+            <br>
+
+            <div class="input input--loading">
+                <input class="input__widget" type="text" placeholder="Ваше имя" value="Константин Константинопольский" disabled>
+            </div>
+
+
             <br>
             <br>
             <br>
@@ -56,6 +72,7 @@
             </div>
 
             <br>
+            <h3>:disabled</h3>
 
             <div class="input input--inverted">
                 <input class="input__widget" type="text" placeholder="Ваше имя" disabled>
@@ -65,6 +82,20 @@
 
             <div class="input input--inverted">
                 <input class="input__widget" type="text" placeholder="Ваше имя" value="Konstantin Konstantinopolsky" disabled>
+            </div>
+
+            <br>
+            <h3>.input--loading</h3>
+            <p>Атрибут <b><i>:disabled</i></b> в этом кейсе тоже используется</p>
+
+            <div class="input input--inverted input--loading">
+                <input class="input__widget" type="text" placeholder="Ваше имя" disabled>
+            </div>
+
+            <br>
+
+            <div class="input input--inverted input--loading">
+                <input class="input__widget" type="text" placeholder="Ваше имя" value="Константин Константинопольский" disabled>
             </div>
 
 
@@ -110,6 +141,17 @@
             <br>
 
             <div class="input">
+                <select class="input__widget" disabled>
+                    <option selected>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="input input--loading">
                 <select class="input__widget" disabled>
                     <option selected>Bangkok</option>
                     <option>Moscow</option>
@@ -239,7 +281,7 @@
         </div>
 
 
-        <script src="../scripts/scripts.js?1722836889"></script>
+        <script src="../scripts/scripts.js?1722838150"></script>
 
 
     </body>

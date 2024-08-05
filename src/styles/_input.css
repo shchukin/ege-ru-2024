@@ -70,6 +70,7 @@
     color: var(--disabled-color);
 }
 
+
 /* stylelint-disable */
 textarea.input__widget {
     height: auto; /* user rows="" attribute to set a default height */

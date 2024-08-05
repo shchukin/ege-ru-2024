@@ -99,36 +99,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Уведомления */
 
-    document.querySelectorAll('.alert').forEach(function(alert) {
-        alert.addEventListener('click', function() {
+    document.querySelectorAll('.alert').forEach(function (alert) {
+        alert.addEventListener('click', function () {
             alert.style.display = 'none';
         });
     });
 
-    document.addEventListener('keyup', function(event) {
+    document.addEventListener('keyup', function (event) {
         if (event.keyCode === 27) {
-            document.querySelectorAll('.alert').forEach(function(alert) {
+            document.querySelectorAll('.alert').forEach(function (alert) {
                 alert.style.display = 'none';
             });
         }
     });
 
-    /* Форма пробного урока */
 
+    /* Форма */
+
+    const subscriptionForm = document.querySelector('#subscriptionForm');
+    const subscriptionInputs = subscriptionForm.querySelectorAll('.input');
+    const subscriptionTerm = subscriptionForm.querySelector('.term');
+    const subscriptionSubmit = subscriptionForm.querySelector('#subscriptionSubmit');
     const subscriptionSuccessAlert = document.querySelector('#subscriptionSuccessAlert');
     const subscriptionFailureAlert = document.querySelector('#subscriptionFailureAlert');
-    const subscriptionForm = document.querySelector('#subscriptionForm');
-    const subscriptionInputs = subscriptionForm.querySelectorAll('input, textarea, select');
-    const subscriptionSubmit = subscriptionForm.querySelector('.subscription__submit');
 
-    /* На время отправки формы инпуты должны блокироваться. Пишем функции для этого: */
+    /* Состояния инпутов (на время отправки формы инпуты должны блокироваться) */
     function disableSubscriptionInputs() {
-        subscriptionInputs.forEach(input => input.setAttribute('disabled', 'disabled'));
+
+        /* Компоненты .input */
+        subscriptionInputs.forEach((input) => {
+            input.classList.add('input--loading');
+            input.querySelector('.input__widget').setAttribute('disabled', 'disabled');
+        });
+
+        /* Компоненты .term (чекбокс) */
+        subscriptionTerm.classList.add('term--loading');
+        subscriptionTerm.querySelector('.term__widget').setAttribute('disabled', 'disabled');
     }
 
     function enableSubscriptionInputs() {
-        subscriptionInputs.forEach(input => input.removeAttribute('disabled'));
+
+        /* Компоненты .input */
+        subscriptionInputs.forEach((input) => {
+            input.classList.remove('input--loading');
+            input.querySelector('.input__widget').removeAttribute('disabled');
+        });
+
+        /* Компоненты .term (чекбокс) */
+        subscriptionTerm.classList.remove('term--loading');
+        subscriptionTerm.querySelector('.term__widget').removeAttribute('disabled');
     }
+
+
+    /* Состояния кнопки */
+
+    function changeSubmitStateToLoading() {
+        subscriptionSubmit.classList.add('button--loading');
+        subscriptionSubmit.setAttribute('disabled', 'disabled');
+    }
+
+    function changeSubmitStateToSuccess() {
+        subscriptionSubmit.classList.remove('button--loading');
+        subscriptionSubmit.classList.add('button--success');
+        subscriptionSubmit.setAttribute('disabled', 'disabled');
+    }
+
+    function changeSubmitStateToFailure() {
+        subscriptionSubmit.classList.remove('button--loading');
+        subscriptionSubmit.classList.add('button--warning');
+        subscriptionSubmit.setAttribute('disabled', 'disabled');
+    }
+
+    function changeSubmitStateToPristine() {
+        subscriptionSubmit.classList.remove('button--loading', 'button--success', 'button--warning');
+        subscriptionSubmit.removeAttribute('disabled');
+    }
+
 
     /* Если пользователь начал взаимодействовать с инпутами, то убираем уведомления с прошлой попытки отправки: */
 
@@ -139,47 +185,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Отправка */
 
-    subscriptionForm.addEventListener('submit', function(event) {
+    subscriptionForm.addEventListener('submit', function (event) {
 
         event.preventDefault();
-
 
         /* Если с прошлой попытки висит уведомление об ошибке: */
         subscriptionFailureAlert.style.display = 'none';
 
         /* Начинаем отправку данных, для начала блокируем форму */
         disableSubscriptionInputs();
-        subscriptionSubmit.classList.add('button--loading');
+        changeSubmitStateToLoading();
 
         /* Представим, что 3000ms отправляем данные */
-        setTimeout(function() {
-
-            /* Как только пришёл ответ убираем button--loading ... */
-            subscriptionSubmit.classList.remove('button--loading');
+        setTimeout(function () {
 
             /* ... дальше развилка, пусть для примера будет рандом 50/50: */
+
+            // Если данные успешно отправлены
             if (Math.random() < 0.5) {
 
-                /* Если данные успешно отправлены -- показываем уведомление и галочку на кнопке на 4.5 секунды: */
-                subscriptionSubmit.classList.add('button--success');
+                // показываем зелёное уведомление:
                 subscriptionSuccessAlert.style.display = 'block';
-                setTimeout(function() {
-                    subscriptionSubmit.classList.remove('button--success');
+
+                // показываем галочку на кнопке:
+                changeSubmitStateToSuccess();
+
+                // и то и другое на 4.5 секунды:
+                setTimeout(function () {
                     subscriptionSuccessAlert.style.display = 'none';
+                    changeSubmitStateToPristine();
                     enableSubscriptionInputs();
                 }, 4500);
 
-            } else {
+            }
 
-                /* Если данные не были отправлены: */
+            // Если произошла ошибка
+            else {
 
-                // Уведомление в этом случае показываем, и НЕ убираем -- пусть висит, пока пользователь не увидит и явно не закроет, или не начнёт заново заполнять форму:
+                // показываем красное уведомление
                 subscriptionFailureAlert.style.display = 'block';
 
-                // На кнопке показываем иконку восклицательного знака, но всего на пару секунд:
-                subscriptionSubmit.classList.add('button--warning');
-                setTimeout(function() {
-                    subscriptionSubmit.classList.remove('button--warning');
+                // Показываем восклицательный знак на кнопке:
+                changeSubmitStateToFailure();
+
+                // В данном случае всего 2 секунды, чтобы пользователь мог быстро вернуться к работе с формой.
+                // Уведомление в этом случае НЕ убираем -- пусть висит, пока пользователь не увидит и явно не закроет, или не начнёт заново заполнять форму / попытается отправить:
+                setTimeout(function () {
+                    changeSubmitStateToPristine();
                     enableSubscriptionInputs();
                 }, 2000);
 

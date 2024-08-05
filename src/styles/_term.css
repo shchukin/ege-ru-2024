@@ -65,14 +65,28 @@
 
 
     /* Disabled */
-    .term__widget:disabled ~ .term__label {
+    .term:not(.term--disabled) .term__widget:disabled ~ .term__label {
         cursor: default;
         opacity: 80%;
     }
 
-    .term__widget:disabled ~ .term__icon {
+    .term:not(.term--disabled) .term__widget:disabled ~ .term__icon {
         background-color: var(--disabled-background);
     }
-        .term__widget:disabled:checked ~ .term__icon .term__check {
+        .term:not(.term--disabled) .term__widget:disabled:checked ~ .term__icon .term__check {
+            opacity: 50%;
+        }
+
+
+    /* Loading */
+    .term--loading .term__label {
+        cursor: default;
+        opacity: 80%;
+    }
+
+    .term--loading .term__icon {
+        background-color: var(--disabled-background);
+    }
+        .term--loading .term__widget:checked ~ .term__icon .term__check {
             opacity: 50%;
         }

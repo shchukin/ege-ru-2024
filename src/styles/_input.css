@@ -59,16 +59,39 @@
     }
 
 
-/* Disabled */
-.input__widget:disabled {
+/* Disabled
+  Здесь добавляется .input:not(.input--loading) потому что
+  иначе :disabled может поломать кейс с loading.
+  Там тоже используется :disabled.
+*/
+
+.input:not(.input--loading) .input__widget:disabled {
     border-color: var(--input-border);
     background-color: var(--disabled-background);
     color: var(--disabled-color);
 }
 
-.input__widget:disabled::placeholder {
+.input:not(.input--loading) .input__widget:disabled::placeholder {
     color: var(--disabled-color);
 }
+
+
+/* loading */
+.input--loading {
+
+}
+    .input--loading .input__widget {
+        border-color: var(--input-border);
+        background-color: var(--disabled-background);
+        color: var(--disabled-color);
+    }
+
+    .input--loading .input__widget::placeholder {
+        color: var(--disabled-color);
+}
+
+
+
 
 
 /* stylelint-disable */
@@ -102,6 +125,12 @@ select.input__widget:disabled {
     cursor: default;
 }
 
+.input--loading select.input__widget {
+    border-color: var(--input-border);
+    background-color: var(--disabled-background);
+    color: var(--disabled-color);
+}
+
 
 
 .input--inverted {
@@ -114,4 +143,35 @@ select.input__widget:disabled {
 
     .input--inverted .input__widget:focus-visible {
         box-shadow: none;
+    }
+
+
+
+/* disabled */
+.input--inverted {
+
+}
+    .input--inverted:not(.input--loading) .input__widget:disabled {
+        border-color: transparent;
+        background-color: var(--disabled-background);
+        color: var(--disabled-color);
+    }
+
+    .input--inverted:not(.input--loading) .input__widget:disabled::placeholder {
+        color: var(--disabled-color);
+    }
+
+
+/* loading */
+.input--inverted.input--loading {
+
+}
+    .input--inverted.input--loading .input__widget {
+        border-color: transparent;
+        background-color: var(--disabled-background);
+        color: var(--disabled-color);
+    }
+
+    .input--inverted.input--loading .input__widget::placeholder {
+        color: var(--disabled-color);
     }

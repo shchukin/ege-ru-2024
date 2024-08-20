@@ -65,15 +65,15 @@
 
 
     /* Disabled */
-    .term:not(.term--disabled) .term__widget:disabled ~ .term__label {
+    .term:not(.term--loading) .term__widget:disabled ~ .term__label {
         cursor: default;
         opacity: 80%;
     }
 
-    .term:not(.term--disabled) .term__widget:disabled ~ .term__icon {
+    .term:not(.term--loading) .term__widget:disabled ~ .term__icon {
         background-color: var(--disabled-background);
     }
-        .term:not(.term--disabled) .term__widget:disabled:checked ~ .term__icon .term__check {
+        .term:not(.term--loading) .term__widget:disabled:checked ~ .term__icon .term__check {
             opacity: 50%;
         }
 
